@@ -1,0 +1,8 @@
+{
+  "name": "react-partyparrot",
+  "version": "0.0.1",
+  "main": "lib/index.js",
+  "repository": "https://github.com/christianrank/react-partyparrot.git",
+  "author": "Christian Rank",
+  "license": "MIT"
+}
