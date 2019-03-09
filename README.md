@@ -1,0 +1,5 @@
+# react-partyparrot
+
+## License
+
+MIT
