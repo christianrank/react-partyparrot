@@ -1,0 +1,20 @@
+image: node:10-alpine
+
+cache: &cache
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+stages:
+  - lint
+
+lint:
+  stage: lint
+  except:
+    - staging
+  cache:
+    <<: *cache
+    policy: pull
+  script:
+    - yarn clean
+    - yarn lint
