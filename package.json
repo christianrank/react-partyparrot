@@ -6,7 +6,7 @@
     "build": "yarn clean && webpack --mode production",
     "clean:dist": "rm -rf dist",
     "clean": "yarn clean:dist && yarn",
-    "lint:js": "eslint --ext .js --ext .jsx .",
+    "lint:js": "eslint --ext .js --ext .jsx src",
     "lint": "yarn lint:js",
     "start": "yarn clean && NODE_ENV=development webpack-dev-server --mode development"
   },
