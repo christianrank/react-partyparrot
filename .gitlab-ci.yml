@@ -10,8 +10,6 @@ stages:
 
 lint:
   stage: lint
-  except:
-    - staging
   cache:
     <<: *cache
     policy: pull
