@@ -5,6 +5,9 @@ cache: &cache
   paths:
     - node_modules/
 
+stages:
+  - lint
+
 lint:
   stage: lint
   except:
