@@ -1,11 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const nodeExternals = require('webpack-node-externals')
+const path = require('path')
 
 const devMode = (process.env.NODE_ENV === 'development')
 
 module.exports = {
   entry: [
-    './src/example/index.jsx',
+    './example/index.jsx',
   ],
   module: {
     rules: [
@@ -25,12 +26,19 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    modules: [
+      'node_modules',
+      path.resolve(__dirname, 'src'),
+    ],
+    extensions: ['.js', '.jsx'],
+  },
   output: {
     libraryTarget: devMode ? 'var' : 'commonjs2',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/example/index.html',
+      template: './example/index.html',
     }),
   ],
   externals: [
