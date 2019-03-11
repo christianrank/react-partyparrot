@@ -1,7 +1,7 @@
 {
   "name": "react-partyparrot",
   "version": "0.0.1",
-  "main": "lib/index.js",
+  "main": "lib/components/Parrot/index.js",
   "scripts": {
     "build": "yarn clean && webpack --mode production",
     "clean:dist": "rm -rf dist",

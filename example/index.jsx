@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Parrot from '../components/Parrot/index.jsx'
+import Parrot from 'components/Parrot'
 
 class Index extends React.PureComponent {
   render() {
