@@ -16,11 +16,12 @@ const getParrotPath = (name, hd) => `${getPublicPath()}/parrots/${hd ? 'hd/' : '
 
 class Parrot extends React.PureComponent {
   static propTypes = {
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     hd: PropTypes.bool,
   }
 
   static defaultProps = {
+    name: '', // the default parrot's name is just "parrot"
     hd: false,
   }
 
