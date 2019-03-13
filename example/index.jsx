@@ -7,7 +7,20 @@ class Index extends React.PureComponent {
   render() {
     return (
       <>
-        <Parrot name="schnitzel" />
+        <p>
+          Default Parrot<br />
+          <Parrot />
+        </p>
+
+        <p>
+          HD Parrot<br />
+          <Parrot hd />
+        </p>
+
+        <p>
+          Parrot with a name<br />
+          <Parrot name="schnitzel" />
+        </p>
       </>
     )
   }
