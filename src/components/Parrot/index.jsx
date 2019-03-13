@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { getPublicPath } from '../../config/publicPath'
 
-// todo: use preval to determine if a parrot really exists
+// todo: use preval to determine if a parrot really exists by injecting the folder contents at build time
 // const parrots = preval`
 //   const fs = require('fs')
 
