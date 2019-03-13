@@ -1,11 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const parrots = require.context('../../../parrots')
+import { getPublicPath } from '../../config/publicPath'
+
+// todo: use preval to determine if a parrot really exists
+// const parrots = preval`
+//   const fs = require('fs')
+
+//   module.exports = fs.readdirSync('parrots')
+// `
 
 const parrotExists = (name) => true // todo
 
-const getParrotPath = (name, hd) => `./${hd ? 'hd/' : ''}${name}parrot.gif`
+const getParrotPath = (name, hd) => `${getPublicPath()}/parrots/${hd ? 'hd/' : ''}${name}parrot.gif`
 
 class Parrot extends React.PureComponent {
   static propTypes = {
@@ -31,7 +38,7 @@ class Parrot extends React.PureComponent {
 
     return (
       <>
-        <img src={parrots.resolve(parrotPath)} alt={`${name}parrot`} />
+        <img src={parrotPath} alt={`${name}parrot`} />
       </>
     )
   }
