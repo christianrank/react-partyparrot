@@ -1,13 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const nodeExternals = require('webpack-node-externals')
 const path = require('path')
 
-const devMode = (process.env.NODE_ENV === 'development')
-
 module.exports = {
-  entry: [
-    './example/index.jsx',
-  ],
+  entry: {
+    main: './src/index.js',
+    example: './example/index.jsx',
+  },
   module: {
     rules: [
       {
@@ -21,7 +19,6 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         use: {
           loader: 'file-loader',
-          options: {},
         },
       },
     ],
@@ -33,15 +30,10 @@ module.exports = {
     ],
     extensions: ['.js', '.jsx'],
   },
-  output: {
-    libraryTarget: devMode ? 'var' : 'commonjs2',
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './example/index.html',
+      inject: false,
     }),
-  ],
-  externals: [
-    devMode ? '' : nodeExternals(),
   ],
 }

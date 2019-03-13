@@ -1,25 +1,31 @@
 {
   "name": "react-partyparrot",
   "version": "0.0.1",
-  "main": "lib/components/Parrot/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "yarn clean && webpack --mode production",
-    "clean:dist": "rm -rf dist",
-    "clean": "yarn clean:dist && yarn",
+    "build": "yarn clean && babel src --out-dir lib",
+    "clean": "rm -rf lib && yarn",
     "lint:js": "eslint --ext .js --ext .jsx src",
     "lint": "yarn lint:js",
-    "start": "yarn clean && NODE_ENV=development webpack-dev-server --mode development"
+    "start": "yarn clean && webpack-dev-server --mode development",
+    "watch": "yarn clean && nodemon -w src -e js,jsx -x \"babel src --out-dir lib\""
   },
+  "files": [
+    "lib",
+    "parrots"
+  ],
   "repository": "https://github.com/christianrank/react-partyparrot.git",
   "author": "Christian Rank",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "babel-plugin-preval": "^3.0.1",
     "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-christianrank": "^4.0.0",
@@ -32,7 +38,7 @@
     "react-dom": "^16.8.4",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1",
-    "webpack-node-externals": "^1.7.2"
-  }
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {}
 }
