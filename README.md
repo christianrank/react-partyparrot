@@ -37,4 +37,4 @@ And use it in your app
 
 ## ![](/parrots/opensourceparrot.gif) License
 
-MIT
+[View the license file](LICENSE)
