@@ -38,9 +38,7 @@ class Parrot extends React.PureComponent {
     }
 
     return (
-      <>
-        <img src={parrotPath} alt={`${name}parrot`} />
-      </>
+      <img src={parrotPath} alt={`${name}parrot`} />
     )
   }
 }
