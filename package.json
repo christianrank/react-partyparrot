@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {
-    "build": "yarn clean && babel src --out-dir lib",
+    "build:js": "babel src --out-dir lib",
+    "build": "yarn clean && yarn build:js",
     "clean": "rm -rf lib && yarn",
     "lint:js": "eslint --ext .js --ext .jsx src",
     "lint": "yarn lint:js",
+    "prepublishOnly": "yarn build",
     "start": "yarn clean && webpack-dev-server --mode development",
-    "watch": "yarn clean && nodemon -w src -e js,jsx -x \"babel src --out-dir lib\""
+    "watch": "yarn clean && nodemon -w src -e js,jsx -x \"yarn build:js\""
   },
   "files": [
     "lib",
