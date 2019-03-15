@@ -1,7 +1,7 @@
 import { setPublicPath } from './config/publicPath'
 import Parrot from './components/Parrot'
 
-export function initializeParrot(path) {
+export function setPublicParrotPath(path) {
   setPublicPath(path)
 }
 

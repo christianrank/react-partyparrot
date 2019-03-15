@@ -13,9 +13,9 @@ You need to make the parrot gifs publicly accessible. There are the following op
 
 The component expects the gif to be accessible in `/parrots`, but you can change that.
 ```js
-import { initializeParrot } from 'react-partyparrot'
+import { setPublicParrotPath } from 'react-partyparrot'
 
-initializeParrot('/your/custom/parrot/path')
+setPublicParrotPath('/your/custom/parrot/path')
 ```
 
 ## ![](/parrots/dealwithitnowparrot.gif) Usage
