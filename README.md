@@ -21,7 +21,7 @@ setPublicParrotPath('/your/custom/parrot/path')
 ## ![](/parrots/dealwithitnowparrot.gif) Usage
 Import the parrot component
 ```js
-import Parrot from 'components/Parrot'
+import Parrot from 'react-partyparrot'
 ```
 And use it in your app
 ```jsx
