@@ -1,4 +1,4 @@
-# ![](parrots/parrot.gif) react-partyparrot ![](parrots/parrot.gif)
+# ![](parrots/parrot.gif) react-partyparrot ![](parrots/rightparrot.gif)
 
 [![](https://git.bitrain.co/christianrank/react-partyparrot/badges/master/build.svg)](https://git.bitrain.co/christianrank/react-partyparrot)
 
