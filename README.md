@@ -1,6 +1,6 @@
 # ![](parrots/parrot.gif) react-partyparrot ![](parrots/rightparrot.gif)
 
-[![](https://git.bitrain.co/christianrank/react-partyparrot/badges/master/build.svg)](https://git.bitrain.co/christianrank/react-partyparrot)
+[![](https://git.bitrain.co/christianrank/react-partyparrot/badges/master/build.svg)](https://git.bitrain.co/christianrank/react-partyparrot/pipelines)
 
 ## ![](/parrots/rotatingparrot.gif) Installation
 Install the package `react-partyparrot` with your favorite package manager.
