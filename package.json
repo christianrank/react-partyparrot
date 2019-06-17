@@ -1,6 +1,6 @@
 {
   "name": "react-partyparrot",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "lib/index.js",
   "scripts": {
     "build:js": "babel src --out-dir lib",
